@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Borrowers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Edit Borrowers</h1>
+    <form id="borrowersForm" method="post" action="process.php">
+        <table id="borrowersTable">
+            <thead>
+                <tr>
+                    <th>BorrowerID</th>
+                    <th>TaxID</th>
+                    <th>IndividualOrLegal</th>
+                    <th>Address</th>
+                    <th>Amount</th>
+                    <th>Conditions</th>
+                    <th>LegalNotes</th>
+                    <th>ContractList</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php include 'process.php'; ?>
+            </tbody>
+        </table>
+        <button type="button" onclick="addRow()">Add Row</button>
+        <button type="submit">Save Changes</button>
+        <button type="button" onclick="goHome()">Go to Home</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
